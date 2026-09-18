@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>湯口塾詫間教室 | 香川県三豊市詫間町の学習塾</title>
   <meta name="description" content="香川県三豊市詫間町の学習塾・湯口塾詫間教室。小学1年生〜中学3年生対象。音読・暗唱を大切にする英語指導と、思考力を育てるパズル道場DX。友達と楽しく切磋琢磨できる環境で、一人ひとりの努力に向き合います。">
-  <link rel="canonical" href="https://yuguchijuku-takuma.netlify.app/">
+  <link rel="canonical" href="https://minoramisakichi-tech.github.io/yuguchijuku-takuma/">
 
   <!-- OGP -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="湯口塾詫間教室">
   <meta property="og:title" content="湯口塾詫間教室 | 香川県三豊市詫間町の学習塾">
   <meta property="og:description" content="小1〜中3対象。音読・暗唱を大切にする英語指導とパズル道場DX。友達と楽しく切磋琢磨できる学習塾です。">
-  <meta property="og:url" content="https://yuguchijuku-takuma.netlify.app/">
-  <meta property="og:image" content="https://yuguchijuku-takuma.netlify.app/ogp.png">
+  <meta property="og:url" content="https://minoramisakichi-tech.github.io/yuguchijuku-takuma/">
+  <meta property="og:image" content="https://minoramisakichi-tech.github.io/yuguchijuku-takuma/ogp.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="湯口塾詫間教室 | 香川県三豊市詫間町の学習塾">
-  <meta name="twitter:image" content="https://yuguchijuku-takuma.netlify.app/ogp.png">
+  <meta name="twitter:image" content="https://minoramisakichi-tech.github.io/yuguchijuku-takuma/ogp.png">
   <meta name="twitter:description" content="小1〜中3対象。音読・暗唱を大切にする英語指導とパズル道場DX。友達と楽しく切磋琢磨できる学習塾です。">
 
   <!-- 構造化データ -->
@@ -29,7 +29,7 @@
     "@type": "EducationalOrganization",
     "name": "湯口塾詫間教室",
     "description": "香川県三豊市詫間町の学習塾。小学1年生〜中学3年生対象。音読・暗唱を大切にする英語指導とパズル道場DX。",
-    "url": "https://yuguchijuku-takuma.netlify.app/",
+    "url": "https://minoramisakichi-tech.github.io/yuguchijuku-takuma/",
     "telephone": "0875-83-3555",
     "address": {
       "@type": "PostalAddress",
@@ -1237,6 +1237,32 @@ footer .footer-logo { height: 30px; margin-bottom: 14px; opacity: 0.9; }
 .pass-gutz-img { width: 128px; flex-shrink: 0; }
 @media (max-width: 720px) { .pass-gutz-img { width: 96px; order: -1; } }
 </style>
+
+<style>
+/* === 新中1特設ページ導線の追加（2026-09） === */
+/* ナビ項目が増えたぶん間隔を微調整 */
+header nav { margin-left: 18px; }
+nav ul { gap: 13px; }
+nav a { font-size: 13px; }
+header.scrolled nav ul { gap: 9px; }
+
+/* 「新中1体験」はピル型で目立たせる */
+.nav-shinchu1 {
+  background: #3BA9CC; color: #fff !important; border-radius: 999px;
+  padding: 6px 13px 7px !important; font-weight: 800;
+}
+.nav-shinchu1::after { display: none; }
+.nav-shinchu1:hover { background: #1E3A6E; }
+.mnav-shinchu1 { color: #3BA9CC !important; font-weight: 800 !important; }
+
+/* 既存不具合の修正：横スクロールが出ていた 721〜1150px でもハンバーガーに切り替える
+   （従来は720px以下でしか切り替わらず、ノートPC・タブレット横向きで
+     ナビがはみ出して画面が横にずれていました） */
+@media (max-width: 1150px) {
+  nav ul { display: none; }
+  .hamburger { display: flex; }
+}
+</style>
 </head>
 <body>
 
@@ -1247,6 +1273,7 @@ footer .footer-logo { height: 30px; margin-bottom: 14px; opacity: 0.9; }
     </a>
     <nav>
       <ul>
+        <li><a href="shinchu1.html" class="nav-shinchu1">新中1体験</a></li>
         <li><a href="#philosophy">理念</a></li>
         <li><a href="#whatsnew">お知らせ</a></li>
         <li><a href="#achievements">テスト実績</a></li>
@@ -1267,6 +1294,7 @@ footer .footer-logo { height: 30px; margin-bottom: 14px; opacity: 0.9; }
     </button>
   </div>
   <div class="mobile-nav" id="mobileNav">
+    <a href="shinchu1.html" class="mnav-shinchu1">新中1 無料体験のご案内</a>
     <a href="#philosophy">理念</a>
     <a href="#whatsnew">お知らせ</a>
     <a href="#achievements">テスト実績</a>
