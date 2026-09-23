@@ -443,6 +443,23 @@ section { padding: 88px 24px; position: relative; }
   font-weight: 500;
 }
 
+a.news-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+a.news-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+.news-more {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #e8608a;
+}
+
 @media (max-width: 720px) {
   .news-title { font-size: 20px; }
   .news-desc { font-size: 17px; }
@@ -1339,13 +1356,14 @@ header.scrolled nav ul { gap: 9px; }
       <h2 class="section-title">詫間教室からのお知らせ</h2>
     </div>
     <div class="news-list">
-      <div class="news-item news-highlight">
+      <a href="shinchu1.html" class="news-item news-highlight news-link">
         <div class="news-date">予告</div>
         <div class="news-content">
           <div class="news-title">🌸 新中学1年生 無料体験</div>
           <div class="news-desc">2027年1月19日（火）17:30〜18:40に実施予定。部活とも両立できる新しい通い方をご紹介します</div>
+          <div class="news-more">くわしく見る →</div>
         </div>
-      </div>
+      </a>
       <div class="news-item">
         <div class="news-date">2026.09.28〜09.29</div>
         <div class="news-content">
