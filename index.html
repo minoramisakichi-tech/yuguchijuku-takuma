@@ -1285,6 +1285,15 @@ header.scrolled nav ul { gap: 9px; }
   nav ul { display: none; }
   .hamburger { display: flex; }
 }
+
+/* === パズル道場ページ導線の追加（2026-10） ===
+   ナビ項目が15個になり、1200px前後の画面ではみ出すため、
+   ヘッダーの幅を広げ、それでも収まらない幅ではハンバーガーに切り替える */
+.header-inner { max-width: 1340px; }
+@media (max-width: 1300px) {
+  nav ul { display: none; }
+  .hamburger { display: flex; }
+}
 </style>
 </head>
 <body>
@@ -1297,6 +1306,7 @@ header.scrolled nav ul { gap: 9px; }
     <nav>
       <ul>
         <li><a href="shinchu1.html" class="nav-shinchu1">新中1体験</a></li>
+        <li><a href="puzzle.html">パズル道場</a></li>
         <li><a href="#philosophy">理念</a></li>
         <li><a href="#whatsnew">お知らせ</a></li>
         <li><a href="#achievements">テスト実績</a></li>
@@ -1318,6 +1328,7 @@ header.scrolled nav ul { gap: 9px; }
   </div>
   <div class="mobile-nav" id="mobileNav">
     <a href="shinchu1.html" class="mnav-shinchu1">新中1 無料体験のご案内</a>
+    <a href="puzzle.html">パズル道場DX（小学生）</a>
     <a href="#philosophy">理念</a>
     <a href="#whatsnew">お知らせ</a>
     <a href="#achievements">テスト実績</a>
@@ -1385,12 +1396,12 @@ header.scrolled nav ul { gap: 9px; }
           <div class="news-desc">10/29（木）〜11/2（月）は塾はお休みです。<br>11/3（火・祝）は小学生の授業はお休みです。中2英語・社会、中3数学・理科の授業はあります</div>
         </div>
       </div>
-      <a href="https://forms.gle/BK3HnKqAgtti1P7g6" target="_blank" rel="noopener" class="news-item news-highlight news-link">
+      <a href="puzzle.html" class="news-item news-highlight news-link">
         <div class="news-date">毎週開催中</div>
         <div class="news-content">
           <div class="news-title">🧩 パズル道場DX 体験受付中</div>
           <div class="news-desc">毎週水曜日 17:00〜／毎週金曜日 17:30〜｜小学1〜6年生対象</div>
-          <div class="news-more">体験を申し込む →</div>
+          <div class="news-more">くわしく見る →</div>
         </div>
       </a>
     </div>
@@ -1517,7 +1528,7 @@ header.scrolled nav ul { gap: 9px; }
         <p>
           小学生の頃から「あーでもない、こーでもない」と考え抜いてきた経験は、
           中学の勉強でもちゃんと結果につながっています。単なる算数の練習ではなく、
-          粘り強く考える力そのものを育てるプログラムです。2017年導入。
+          粘り強く考える力そのものを育てるプログラムです。2017年導入。<br><a href="puzzle.html" style="display:inline-block;margin-top:10px;font-weight:800;color:#2D6A4F;border-bottom:2px solid #40916C;">パズル道場DXについてくわしく見る →</a>
         </p>
       </div>
     </div>
