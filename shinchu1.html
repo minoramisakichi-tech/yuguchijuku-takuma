@@ -284,7 +284,7 @@ footer a { color: #fff; }
 
 /* === 2026-10 改善：2つの通い方・両立の流れ === */
 .msg-box { margin-top: 30px; background: #fff; border: 2px solid rgba(94,200,232,.45); border-radius: var(--radius-lg); padding: 30px 30px 26px; }
-.msg-box .msg-head { font-size: clamp(20px, 2.6vw, 26px); color: var(--navy); }
+.msg-box .msg-head { font-size: clamp(20px, 2.6vw, 26px); color: var(--navy); text-wrap: balance; }
 .msg-box > p { margin-top: 10px; font-size: 15px; color: var(--muted); }
 .day-flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 22px; }
 .day-flow .slot { background: #F0F9FD; border-radius: 14px; padding: 14px 12px; text-align: center; }
@@ -304,6 +304,39 @@ a.voice-link { display: block; transition: transform .15s ease, box-shadow .15s 
 a.voice-link:hover { transform: translateY(-3px); box-shadow: 0 12px 26px -14px rgba(30,58,110,.35); }
 a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset: 3px; }
 .voice-go { display: inline-block; margin-top: 10px; font-size: 12.5px; font-weight: 800; color: var(--blue-deep); }
+
+/* 2026-10 改善：夕方に学ぶ／夜に学ぶ の2列 */
+.lanes { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, auto); row-gap: 14px; column-gap: 14px; margin-top: 20px; }
+.lane { display: grid; grid-row: 1 / 5; grid-template-rows: subgrid; padding: 14px 14px 16px; border-radius: 18px; background: #D9F0F9; min-width: 0; }
+.lane.night { background: #E2E2F6; }
+.lh { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 10px; text-align: center; }
+.lh .lt { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: clamp(20px, 3vw, 28px); color: var(--blue-deep); letter-spacing: .04em; }
+.lane.night .lh .lt { color: #2B2F86; }
+.lh em { font-style: normal; font-weight: 800; font-size: 13px; color: #fff; background: var(--blue-deep); border-radius: 999px; padding: 3px 12px; white-space: nowrap; }
+.lane.night .lh em { background: #2B2F86; }
+.cell { position: relative; display: flex; align-items: center; gap: 10px; border-radius: 12px; padding: 10px 12px; min-width: 0; }
+.cell .tx { flex: 1; min-width: 0; }
+.cell .t { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: 17px; line-height: 1.35; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.cell .d { font-size: 12.5px; font-weight: 700; line-height: 1.5; margin-top: 2px; }
+.cell.hokago { background: #fff; color: var(--text); }
+.cell.yugata { background: var(--blue-deep); color: #fff; }
+.cell.yugata.free { background: #CDEBF5; color: var(--navy); }
+.cell.yoru { background: #2B2F86; color: #fff; }
+.cell.sport { background: #DDF1E2; color: #2F6E3A; }
+.bt { flex: 0 0 auto; width: 46px; text-align: center; font-size: 12px; font-weight: 800; border-radius: 6px; padding: 2px 0; background: rgba(30,58,110,.08); }
+.cell.yugata:not(.free) .bt, .cell.yoru .bt { background: rgba(255,255,255,.22); }
+.juku { background: var(--accent-yellow); color: var(--navy); font-size: 12px; font-weight: 800; border-radius: 5px; padding: 1px 6px; }
+.down::after { content: "▼"; position: absolute; left: 50%; bottom: -13px; transform: translateX(-50%); font-size: 10px; line-height: 1; color: #6E8BA3; }
+@media (max-width: 600px) {
+  .lanes { column-gap: 8px; row-gap: 12px; }
+  .lane { padding: 12px 8px 12px; border-radius: 14px; }
+  .lh em { font-size: 11px; padding: 2px 8px; white-space: normal; }
+  .cell { flex-direction: column; align-items: flex-start; gap: 4px; padding: 8px 9px; }
+  .bt { width: auto; padding: 1px 6px; font-size: 11px; }
+  .cell .t { font-size: 14.5px; }
+  .cell .d { font-size: 11.5px; }
+  .down::after { bottom: -11px; }
+}
 </style>
 </head>
 <body>
@@ -394,15 +427,23 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
     </div>
 
     <div class="msg-box">
-      <h3 class="msg-head">夕方は湯口塾で学び、夜は大好きなスポーツへ。</h3>
-      <p>勉強かスポーツか、どちらかをあきらめる必要はありません。ACTの日は、たとえばこんな流れで過ごせます。</p>
-      <div class="day-flow">
-        <div class="slot"><div class="t">放課後</div><div class="d">学校が終わったら<br>そのまま塾へ</div></div>
-        <div class="slot act"><div class="t">16:30</div><div class="d">ACTスタート<br>（1回90分）</div></div>
-        <div class="slot act"><div class="t">18:00</div><div class="d">ACT終わり</div></div>
-        <div class="slot sport"><div class="t">夜</div><div class="d">クラブの練習へ</div></div>
+      <h3 class="msg-head">夕方に学ぶか、夜に学ぶか。部活・クラブに合わせて選べます。</h3>
+      <p>勉強かスポーツか、どちらかをあきらめる必要はありません。3月最終週からは、2つの通い方から選べます。</p>
+      <div class="lanes">
+        <div class="lane">
+          <div class="lh"><span class="lt">夕方に学ぶ</span><em>ACT　火・水・木・金</em></div>
+          <div class="cell hokago down"><span class="bt">放課後</span><div class="tx"><div class="t">学校からそのまま塾へ</div></div></div>
+          <div class="cell yugata down"><span class="bt">夕方</span><div class="tx"><div class="t"><span class="juku">塾</span>16:30〜18:00</div><div class="d">英語・数学の個別指導（90分）</div></div></div>
+          <div class="cell sport"><span class="bt">夜</span><div class="tx"><div class="t">クラブの練習へ</div><div class="d">夜の練習にも参加できます</div></div></div>
+        </div>
+        <div class="lane night">
+          <div class="lh"><span class="lt">夜に学ぶ</span><em>集団指導　火・水・土</em></div>
+          <div class="cell sport down"><span class="bt">放課後</span><div class="tx"><div class="t">部活動</div></div></div>
+          <div class="cell yugata free down"><span class="bt">夕方</span><div class="tx"><div class="t">帰宅・夕ごはん</div></div></div>
+          <div class="cell yoru"><span class="bt">夜</span><div class="tx"><div class="t"><span class="juku">塾</span>19:30〜21:00</div><div class="d">英語・数学の集団指導（友だちといっしょに）</div></div></div>
+        </div>
       </div>
-      <div class="fineprint">※16:30スタートの場合の例です。17:00スタート（18:30終わり）も選べます。水曜は16:00スタートもあります。練習の時間はクラブによって異なりますので、個別にご相談ください。</div>
+      <div class="fineprint">※ACTは17:00スタート（18:30終わり）、水曜は16:00スタートも選べます。練習の時間はクラブによって異なりますので、個別にご相談ください。</div>
     </div>
   </div>
 </section>
