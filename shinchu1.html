@@ -356,8 +356,8 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
 .start-band ruby rt { font-size: 10px; font-weight: 800; }
 .merits { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
 .mc { border-radius: 18px; padding: 18px 20px 20px; }
-.mc.act { border: 3px solid #1A7FA6; background: #EEF8FC; }
-.mc.main { border: 3px solid #2B2F86; background: #F1F1FB; }
+.mc.act { border: 4px solid #0F5F80; background: #EEF8FC; }
+.mc.main { border: 4px solid #1E2270; background: #F1F1FB; }
 .mc .mh { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: 18px; }
 .mc.act .mh { color: #1A6E92; }
 .mc.main .mh { color: #2B2F86; }
@@ -367,17 +367,17 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
 .mc.act li::before { color: #1A7FA6; }
 .mc.main li::before { color: #2B2F86; }
 @media (max-width: 700px) { .merits { grid-template-columns: 1fr; } }
-.results-em { background: linear-gradient(160deg, #0E9A72 0%, #077A5A 100%); color: #fff; }
-.results-em .section-eyebrow { color: #FFF200; }
-.results-em .section-title { color: #fff; }
-.results-em .section-lead { color: #E3F6EE; }
-.results-em .stat { background: rgba(255,255,255,.12); border: 2px solid rgba(255,255,255,.28); }
+.results-em { background: #EEF8F3; border-top: 1px solid #CDEBDD; border-bottom: 1px solid #CDEBDD; }
+.results-em .section-eyebrow { color: #0B8A66; }
+.results-em .stat { background: linear-gradient(160deg, #12A47A 0%, #0B8A66 100%); border: 0; box-shadow: 0 10px 22px -16px rgba(7,90,66,.6); }
 .results-em .stat .n { color: #FFF200; text-shadow: 0 2px 0 rgba(0,60,40,.35); }
-.results-em .stat .cap { color: #E3F6EE; }
-.results-em .stat.hl { background: #fff; border-color: #fff; }
-.results-em .stat.hl .n { color: #077A5A; text-shadow: none; }
-.results-em .stat.hl .cap { color: #077A5A; }
-.results-em .info-strip { background: #fff; color: var(--text); }
+.results-em .stat .cap { color: #fff; }
+.results-em .stat.hl { background: #fff; border: 3px solid #0B8A66; }
+.results-em .stat.hl .n { color: #0B8A66; text-shadow: none; }
+.results-em .stat.hl .cap { color: #0B8A66; }
+.results-em .info-strip { background: #fff; border: 2px solid #CDEBDD; }
+.pass-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.pass-chips span { background: #0B8A66; color: #fff; font-weight: 800; font-size: 14px; padding: 5px 14px; border-radius: 999px; }
 </style>
 </head>
 <body>
@@ -600,7 +600,8 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
     </div>
     <div class="info-strip">
       <div class="ico">🌸</div>
-      <p><b>令和8年度入試では、詫間教室は全員合格しました。</b>観音寺第一・国立高専・高瀬・観音寺総合をはじめとする進学先には、湯口塾全体（全教室）から多くの塾生が進んでいます。</p>
+      <div><p><b>令和8年度入試では、詫間教室の受験生は全員合格しました。</b>詫間教室からの主な合格先です。</p>
+        <div class="pass-chips"><span>丸亀高校</span><span>観音寺第一高校</span><span>香川高専</span><span>高瀬高校</span><span>多度津高校</span><span>観音寺総合高校</span><span>高松工芸高校</span></div></div>
     </div>
   </div>
 </section>
