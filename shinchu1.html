@@ -105,7 +105,7 @@ header nav a.current { color: var(--blue-deep); border-bottom: 2px solid var(--b
 .mobile-nav a { padding: 13px 24px; font-size: 15px; font-weight: 700; border-bottom: 1px solid rgba(94,200,232,.18); }
 
 /* ===== Hero ===== */
-.hero { background: linear-gradient(180deg, #E4F4FC 0%, var(--bg) 100%); padding: 56px 0 64px; }
+.hero { background: linear-gradient(180deg, #D3EEF9 0%, #E9F6FC 45%, var(--bg) 100%); padding: 56px 0 64px; }
 .hero-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 44px; flex-wrap: wrap; }
 .hero-text { flex: 1 1 440px; min-width: 0; }
 .badge-top {
@@ -343,7 +343,7 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
   .down::after { bottom: -11px; }
 }
 
-.hero-sub2 { margin-top: 14px; font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: clamp(22px, 3vw, 30px); color: var(--blue-deep); line-height: 1.3; }
+.hero-sub2 { margin-top: 14px; font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: clamp(22px, 3vw, 30px); color: #1A5F86; line-height: 1.3; }
 .hero-sub2 .mi { display: inline-block; font-size: .5em; color: var(--navy); letter-spacing: .08em; margin-right: 10px; vertical-align: middle; }
 .start-band { display: inline-block; margin-top: 12px; background: var(--accent-yellow); color: var(--navy); font-weight: 800; font-size: 14.5px; padding: 6px 14px; border-radius: 8px; line-height: 1.5; }
 .cocreate { margin-top: 26px; background: linear-gradient(135deg, #EAF7EE 0%, #E4F4FC 100%); border-radius: var(--radius-lg); padding: 28px 30px; border: 2px solid rgba(92,184,92,.35); }
@@ -351,6 +351,33 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
 .cocreate h3 { margin-top: 10px; font-size: clamp(19px, 2.4vw, 24px); color: var(--navy); text-wrap: balance; }
 .cocreate p { margin-top: 10px; font-size: 15px; color: var(--muted); max-width: 720px; }
 @media (max-width: 600px) { .cocreate { padding: 22px 20px; } }
+
+/* 2026-10 チラシとそろえた色づかい */
+.start-band ruby rt { font-size: 10px; font-weight: 800; }
+.merits { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+.mc { border-radius: 18px; padding: 18px 20px 20px; }
+.mc.act { border: 3px solid #1A7FA6; background: #EEF8FC; }
+.mc.main { border: 3px solid #2B2F86; background: #F1F1FB; }
+.mc .mh { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: 18px; }
+.mc.act .mh { color: #1A6E92; }
+.mc.main .mh { color: #2B2F86; }
+.mc ul { list-style: none; margin-top: 8px; }
+.mc li { font-size: 14.5px; font-weight: 700; line-height: 1.7; padding-left: 22px; position: relative; color: var(--text); }
+.mc li::before { content: "✓"; position: absolute; left: 0; font-weight: 900; }
+.mc.act li::before { color: #1A7FA6; }
+.mc.main li::before { color: #2B2F86; }
+@media (max-width: 700px) { .merits { grid-template-columns: 1fr; } }
+.results-em { background: linear-gradient(160deg, #0E9A72 0%, #077A5A 100%); color: #fff; }
+.results-em .section-eyebrow { color: #FFF200; }
+.results-em .section-title { color: #fff; }
+.results-em .section-lead { color: #E3F6EE; }
+.results-em .stat { background: rgba(255,255,255,.12); border: 2px solid rgba(255,255,255,.28); }
+.results-em .stat .n { color: #FFF200; text-shadow: 0 2px 0 rgba(0,60,40,.35); }
+.results-em .stat .cap { color: #E3F6EE; }
+.results-em .stat.hl { background: #fff; border-color: #fff; }
+.results-em .stat.hl .n { color: #077A5A; text-shadow: none; }
+.results-em .stat.hl .cap { color: #077A5A; }
+.results-em .info-strip { background: #fff; color: var(--text); }
 </style>
 </head>
 <body>
@@ -398,7 +425,7 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
       <span class="badge-top">2027年4月 新中学1年生 対象</span>
       <h1>部活とも、<br><span class="accent">両立できる。</span></h1>
       <p class="hero-sub2"><span class="mi">みらいのために</span>始まる前に、始める。</p>
-      <span class="start-band">英語・数学　2027年1月スタート ／ 3月最終週から夕方のACTも</span>
+      <span class="start-band">英語・数学　2027年1月スタート ／ 3月最終週から夕方の<ruby>ACT<rt>アクト</rt></ruby>も</span>
       <p class="hero-lead">スポーツも続けたい。勉強も頑張りたい。<br>そのどちらも、湯口塾は応援します。</p>
       <p class="hero-sub">2027年3月最終週から、通い方を2つから選べるようになります。友だちといっしょに学ぶ「夜の集団指導」と、学校が終わってすぐに学べる「夕方の個別指導ACT」。部活動やクラブチームの予定に合わせて、お子さまに合う通い方をいっしょに考えませんか。</p>
       <div class="cta-group">
@@ -466,6 +493,25 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
         </div>
       </div>
       <div class="fineprint">※ACTは17:00スタート（18:30終わり）、水曜は16:00スタートも選べます。練習の時間はクラブによって異なりますので、個別にご相談ください。</div>
+    </div>
+
+    <div class="merits">
+      <div class="mc act">
+        <div class="mh">夕方のACTの良さ</div>
+        <ul>
+          <li>文系も理系も、経験豊富な専任講師が直接指導</li>
+          <li>一人ひとりの理解に合わせて進める個別指導</li>
+          <li>通う曜日・時間帯を選べる（火〜金・16:30／17:00）</li>
+        </ul>
+      </div>
+      <div class="mc main">
+        <div class="mh">夜の集団指導の良さ</div>
+        <ul>
+          <li>友だちといっしょに、楽しく高め合える</li>
+          <li>宿題は基本なし。授業の中でしっかり身につける</li>
+          <li>中1から受験まで、学年の仲間とともに3年間</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -541,7 +587,7 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
 </section>
 
 <!-- RESULTS -->
-<section class="block tint">
+<section class="block results-em">
   <div class="container">
     <div class="section-eyebrow">achievements</div>
     <h2 class="section-title">詫間中で、結果が出ています。</h2>
