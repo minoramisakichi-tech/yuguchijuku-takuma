@@ -1400,6 +1400,24 @@ header.scrolled nav ul { gap: 9px; }
 }
 .page-toc-list a:hover { background: #E8F5FA; border-color: var(--blue); }
 .page-toc { scroll-margin-top: 90px; }
+/* 目次：Apple Watch風のアイコンメニュー（2026-10） */
+.watch { max-width: 560px; margin: 0 auto; background: #0E1A33; border-radius: 44px; padding: 26px 18px 22px; box-shadow: 0 0 0 6px #2A3550, 0 18px 40px -20px rgba(14,26,51,.6); }
+.wrow { display: flex; justify-content: center; gap: 14px; }
+.wrow + .wrow { margin-top: 6px; }
+.wi { display: flex; flex-direction: column; align-items: center; width: 92px; text-decoration: none; }
+.wi .ic { width: 70px; height: 70px; border-radius: 50%; background: var(--c); display: flex; align-items: center; justify-content: center; font-size: 32px; line-height: 1; box-shadow: inset 0 -4px 0 rgba(0,0,0,.12); transition: transform .15s ease; }
+.wi .lb { margin-top: 6px; font-size: 12.5px; font-weight: 800; color: #E8EEF8; white-space: nowrap; }
+.wi:hover .ic, .wi:focus-visible .ic { transform: scale(1.1); }
+.wi:focus-visible { outline: none; }
+.wi:focus-visible .ic { box-shadow: 0 0 0 3px #fff; }
+@media (max-width: 480px) {
+  .watch { border-radius: 34px; padding: 20px 8px 16px; }
+  .wrow { gap: 6px; }
+  .wi { width: 76px; }
+  .wi .ic { width: 58px; height: 58px; font-size: 27px; }
+  .wi .lb { font-size: 11px; }
+}
+
 /* 目次へ戻るボタン（右下） */
 .toc-back {
   position: fixed; right: 20px; bottom: 24px; z-index: 190;
@@ -1484,21 +1502,29 @@ body:has(.mobile-nav.open) .toc-back { opacity: 0; pointer-events: none; }
 <div class="page-toc" id="toc" role="navigation" aria-label="このページの目次">
   <div class="container">
     <div class="page-toc-title">このページの内容</div>
-    <div class="page-toc-list">
-      <a href="#twoway">2つの通い方</a>
-      <a href="#whatsnew">お知らせ</a>
-      <a href="#philosophy">理念</a>
-      <a href="#achievements">テスト実績</a>
-      <a href="#pass-results">合格実績</a>
-      <a href="#teachers">講師紹介</a>
-      <a href="#voices">生徒の声</a>
-      <a href="#fees">料金</a>
-      <a href="#curriculum">指導教科</a>
-      <a href="#classroom">教室の様子</a>
-      <a href="#calendar">カレンダー</a>
-      <a href="#access">アクセス</a>
-      <a href="#faq">よくある質問</a>
-      <a href="#contact">お問い合わせ</a>
+    <div class="watch">
+      <div class="wrow">
+        <a class="wi" href="#twoway" style="--c:#3BA9CC"><span class="ic" aria-hidden="true">🕓</span><span class="lb">2つの通い方</span></a>
+        <a class="wi" href="#whatsnew" style="--c:#FF9F0A"><span class="ic" aria-hidden="true">📣</span><span class="lb">お知らせ</span></a>
+        <a class="wi" href="#philosophy" style="--c:#FFCC00"><span class="ic" aria-hidden="true">💡</span><span class="lb">理念</span></a>
+        <a class="wi" href="#achievements" style="--c:#30D158"><span class="ic" aria-hidden="true">📈</span><span class="lb">テスト実績</span></a>
+      </div>
+      <div class="wrow">
+        <a class="wi" href="#pass-results" style="--c:#FF375F"><span class="ic" aria-hidden="true">🌸</span><span class="lb">合格実績</span></a>
+        <a class="wi" href="#teachers" style="--c:#5E5CE6"><span class="ic" aria-hidden="true">🧑‍🏫</span><span class="lb">講師紹介</span></a>
+        <a class="wi" href="#voices" style="--c:#34C759"><span class="ic" aria-hidden="true">💬</span><span class="lb">生徒の声</span></a>
+      </div>
+      <div class="wrow">
+        <a class="wi" href="#fees" style="--c:#FF9500"><span class="ic" aria-hidden="true">💴</span><span class="lb">料金</span></a>
+        <a class="wi" href="#curriculum" style="--c:#0A84FF"><span class="ic" aria-hidden="true">📚</span><span class="lb">指導教科</span></a>
+        <a class="wi" href="#classroom" style="--c:#64D2FF"><span class="ic" aria-hidden="true">🏫</span><span class="lb">教室の様子</span></a>
+        <a class="wi" href="#calendar" style="--c:#FFFFFF"><span class="ic" aria-hidden="true">📅</span><span class="lb">カレンダー</span></a>
+      </div>
+      <div class="wrow">
+        <a class="wi" href="#access" style="--c:#30B0C7"><span class="ic" aria-hidden="true">🗺️</span><span class="lb">アクセス</span></a>
+        <a class="wi" href="#faq" style="--c:#BF5AF2"><span class="ic" aria-hidden="true">❓</span><span class="lb">よくある質問</span></a>
+        <a class="wi" href="#contact" style="--c:#FF2D55"><span class="ic" aria-hidden="true">✉️</span><span class="lb">お問い合わせ</span></a>
+      </div>
     </div>
   </div>
 </div>
