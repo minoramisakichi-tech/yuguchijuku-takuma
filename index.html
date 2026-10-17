@@ -388,6 +388,43 @@ section { padding: 88px 24px; position: relative; }
 }
 
 .philo-quote-text .hl { color: var(--accent-yellow); }
+.director-msg {
+  margin: 40px auto 0;
+  max-width: 760px;
+  background: var(--bg);
+  border-radius: var(--radius-lg);
+  border-left: 6px solid var(--blue-deep);
+  padding: 36px 40px;
+}
+.director-msg-label {
+  color: var(--blue-deep);
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.director-msg h3 {
+  color: var(--navy);
+  font-size: 1.35rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.director-msg p {
+  color: var(--text);
+  line-height: 2;
+  margin-bottom: 14px;
+}
+.director-msg p:last-of-type { margin-bottom: 0; }
+.director-msg .sign {
+  text-align: right;
+  color: var(--navy);
+  font-weight: 700;
+  margin-top: 18px;
+}
+@media (max-width: 640px) {
+  .director-msg { padding: 26px 22px; }
+  .director-msg h3 { font-size: 1.15rem; }
+}
 
 /* ===== 実績 Achievements ===== */
 .whatsnew { background: white; }
@@ -1391,7 +1428,8 @@ header.scrolled nav ul { gap: 9px; }
       <h1 class="hero-title">「友達がいるから<br>来たい」で<span class="accent">いいんです。</span></h1>
       <p class="hero-sub">
         湯口塾詫間教室は、上位の子だけのための塾ではありません。
-        塾生同士が楽しく切磋琢磨しながら、一人ひとりの努力にしっかり向き合う。
+        苦手な教科があっても、結果がすぐに出なくても、あきらめずに向き合う子のそばで、いっしょに走り続けます。
+        友だちと高め合いながら、一人ひとりの努力にしっかり向き合う。
         その積み重ねが、確かな結果につながっています。
       </p>
       <div class="cta-group">
@@ -1512,6 +1550,14 @@ header.scrolled nav ul { gap: 9px; }
         ある日ふと気づく。「あれ、自分って成長してる？」
         その瞬間を一緒に作りたいと思っています。
       </p>
+    </div>
+    <div class="director-msg">
+      <div class="director-msg-label">教室長より</div>
+      <h3>あきらめないこと。<br>いっしょに並走すること。</h3>
+      <p>塾講師になって35年近くになります。</p>
+      <p>先日、ずっとひたむきに頑張ってきた生徒に、いつものように結果をたずねると、「よかったです！」と笑顔が返ってきました。自分で自分に拍手をする姿を見て、胸がいっぱいになりました。</p>
+      <p>100点を取らせることだけが、私たちの仕事ではありません。あきらめないこと。苦しいときも気持ちに寄り添い、いっしょに並走すること。それが、湯口塾詫間教室の変わらない姿勢です。</p>
+      <div class="sign">湯口塾詫間教室 教室長</div>
     </div>
   </div>
 </section>
