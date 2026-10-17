@@ -378,6 +378,32 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
 .results-em .info-strip { background: #fff; border: 2px solid #CDEBDD; }
 .pass-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 .pass-chips span { background: #0B8A66; color: #fff; font-weight: 800; font-size: 14px; padding: 5px 14px; border-radius: 999px; }
+
+/* 2026-10 体験〜入学までの流れ（チラシとそろえる） */
+.road-sec { padding: 40px 0 8px; }
+.road { background: #fff; border: 2px solid #D6EEF7; border-radius: var(--radius-lg); padding: 22px 24px 18px; }
+.road .rh { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: clamp(19px, 2.4vw, 24px); color: var(--navy); text-align: center; }
+.road .rh span { display: inline-block; margin-left: 12px; font-size: 14px; color: var(--muted); }
+.rsteps { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 16px; }
+.rs { color: #fff; text-align: center; padding: 14px 10px 16px 24px; margin-right: -8px; clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%, 18px 50%); }
+.rs.s1 { background: #F2A900; padding-left: 10px; border-radius: 14px 0 0 14px; clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%); }
+.rs.s2 { background: #3BA9CC; }
+.rs.s3 { background: #1A7FA6; }
+.rs.s4 { background: #2B2F86; margin-right: 0; border-radius: 0 14px 14px 0; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 18px 50%); }
+.rs .m { font-size: 13px; font-weight: 800; }
+.rs .t { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.3; margin-top: 2px; }
+.rs .d { font-size: 12.5px; font-weight: 700; line-height: 1.5; margin-top: 4px; }
+.road .rnote { margin-top: 12px; text-align: center; font-size: 13.5px; font-weight: 700; color: var(--muted); }
+.mc .mh small { font-size: .72em; }
+@media (max-width: 700px) {
+  .road { padding: 18px 14px 14px; }
+  .road .rh span { display: block; margin: 4px 0 0; }
+  .rsteps { grid-template-columns: 1fr; gap: 0; }
+  .rs, .rs.s1, .rs.s4 { margin: 0 0 -6px; padding: 12px 14px 20px; border-radius: 0; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), 50% 100%, 0 calc(100% - 12px)); }
+  .rs.s1 { border-radius: 12px 12px 0 0; }
+  .rs.s4 { margin-bottom: 0; padding-bottom: 14px; border-radius: 0 0 12px 12px; clip-path: none; }
+  .rs .t { font-size: 18px; }
+}
 </style>
 </head>
 <body>
@@ -425,7 +451,7 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
       <span class="badge-top">2027年4月 新中学1年生 対象</span>
       <h1>部活とも、<br><span class="accent">両立できる。</span></h1>
       <p class="hero-sub2"><span class="mi">みらいのために</span>始まる前に、始める。</p>
-      <span class="start-band">英語・数学　2027年1月スタート ／ 3月最終週から夕方の<ruby>ACT<rt>アクト</rt></ruby>も</span>
+      <span class="start-band">英語・数学　2027年1月スタート ／ 3月最終週から<ruby>ACT<rt>アクト</rt></ruby>（自立型個別指導）も</span>
       <p class="hero-lead">スポーツも続けたい。勉強も頑張りたい。<br>そのどちらも、湯口塾は応援します。</p>
       <p class="hero-sub">2027年3月最終週から、通い方を2つから選べるようになります。友だちといっしょに学ぶ「夜の集団指導」と、学校が終わってすぐに学べる「夕方の個別指導ACT」。部活動やクラブチームの予定に合わせて、お子さまに合う通い方をいっしょに考えませんか。</p>
       <div class="cta-group">
@@ -458,6 +484,22 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
   </div>
 </div>
 
+<!-- ROAD -->
+<section class="road-sec" id="schedule">
+  <div class="container">
+    <div class="road">
+      <div class="rh">詫間教室の開講日程<span>体験から中学入学までの流れ</span></div>
+      <div class="rsteps">
+        <div class="rs s1"><div class="m">1月19日（火）</div><div class="t">無料体験</div><div class="d">17:30〜18:40<br>保護者説明会も同時に</div></div>
+        <div class="rs s2"><div class="m">1月〜</div><div class="t">全員でスタート</div><div class="d">英語 火・金／数学 水<br>17:30〜19:00</div></div>
+        <div class="rs s3"><div class="m">3月最終週〜</div><div class="t">通い方を選ぶ</div><div class="d">夜の集団指導 または<br>夕方のACT</div></div>
+        <div class="rs s4"><div class="m">4月</div><div class="t">中学校へ入学</div><div class="d">部活・クラブと<br>両立しながら</div></div>
+      </div>
+      <div class="rnote">入塾試験・面接はありません。体験のあと、そのまま1月から通えます。1〜3月第3週の月謝は英数セット 月19,630円（税込）です。</div>
+    </div>
+  </div>
+</section>
+
 <!-- BACKGROUND -->
 <section class="block">
   <div class="container">
@@ -482,7 +524,7 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
         <div class="lane">
           <div class="lh"><span class="lt">夕方に学ぶ</span><em>ACT　火・水・木・金</em></div>
           <div class="cell hokago down"><span class="bt">放課後</span><div class="tx"><div class="t">学校からそのまま塾へ</div></div></div>
-          <div class="cell yugata down"><span class="bt">夕方</span><div class="tx"><div class="t"><span class="juku">塾</span>16:30〜18:00</div><div class="d">英語・数学の個別指導（90分）</div></div></div>
+          <div class="cell yugata down"><span class="bt">夕方</span><div class="tx"><div class="t"><span class="juku">塾</span>16:30〜18:00</div><div class="d">英語・数学の自立型個別指導（90分）</div></div></div>
           <div class="cell sport"><span class="bt">夜</span><div class="tx"><div class="t">クラブの練習へ</div><div class="d">夜の練習にも参加できます</div></div></div>
         </div>
         <div class="lane night">
@@ -497,7 +539,7 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
 
     <div class="merits">
       <div class="mc act">
-        <div class="mh">夕方のACTの良さ</div>
+        <div class="mh">夕方のACT<small>（自立型個別指導）</small>の良さ</div>
         <ul>
           <li>文系も理系も、経験豊富な専任講師が直接指導</li>
           <li>一人ひとりの理解に合わせて進める個別指導</li>
@@ -566,7 +608,7 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
         <div class="fineprint">1回90分です。下校が早い水曜は、さらに柔軟に対応できます。</div>
       </div>
       <div class="card">
-        <h3>ACTの料金（中学部・税込）</h3>
+        <h3>ACT（自立型個別指導）の料金（中学部・税込）</h3>
         <p style="margin-bottom:12px; font-size:13.5px;">3月最終週にACTを選ばれた場合の料金です</p>
         <table class="rate">
           <tr><td>入会金</td><td>11,000円</td></tr>
