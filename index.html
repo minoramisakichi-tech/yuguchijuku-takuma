@@ -1407,6 +1407,11 @@ header.scrolled nav ul { gap: 9px; }
 .wi { display: flex; flex-direction: column; align-items: center; width: 92px; text-decoration: none; }
 .wi .ic { width: 70px; height: 70px; border-radius: 50%; background: var(--c); display: flex; align-items: center; justify-content: center; font-size: 32px; line-height: 1; box-shadow: inset 0 -4px 0 rgba(0,0,0,.12); transition: transform .15s ease; }
 .wi .lb { margin-top: 6px; font-size: 12.5px; font-weight: 800; color: #E8EEF8; white-space: nowrap; }
+.wi .ic { position: relative; }
+.wi .ic.tx { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: 38px; color: #fff; }
+.wi .ic.tx.dark { color: #1E3A6E; }
+.wi .ic .new { position: absolute; top: -6px; right: -12px; background: #FF3B30; color: #fff; font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 10.5px; font-weight: 800; padding: 2px 6px; border-radius: 999px; border: 2px solid #0E1A33; line-height: 1.2; }
+@media (max-width: 480px) { .wi .ic.tx { font-size: 32px; } .wi .ic .new { font-size: 9.5px; right: -10px; } }
 .wi:hover .ic, .wi:focus-visible .ic { transform: scale(1.1); }
 .wi:focus-visible { outline: none; }
 .wi:focus-visible .ic { box-shadow: 0 0 0 3px #fff; }
@@ -1505,8 +1510,8 @@ body:has(.mobile-nav.open) .toc-back { opacity: 0; pointer-events: none; }
     <div class="watch">
       <div class="wrow">
         <a class="wi" href="#twoway" style="--c:#3BA9CC"><span class="ic" aria-hidden="true">🕓</span><span class="lb">2つの通い方</span></a>
-        <a class="wi" href="#whatsnew" style="--c:#FF9F0A"><span class="ic" aria-hidden="true">📣</span><span class="lb">お知らせ</span></a>
-        <a class="wi" href="#philosophy" style="--c:#FFCC00"><span class="ic" aria-hidden="true">💡</span><span class="lb">理念</span></a>
+        <a class="wi" href="#whatsnew" style="--c:#FF9F0A"><span class="ic" aria-hidden="true">📣<span class="new">NEW!</span></span><span class="lb">お知らせ</span></a>
+        <a class="wi" href="#philosophy" style="--c:#0B7A75"><span class="ic" aria-hidden="true">💡</span><span class="lb">理念</span></a>
         <a class="wi" href="#achievements" style="--c:#30D158"><span class="ic" aria-hidden="true">📈</span><span class="lb">テスト実績</span></a>
       </div>
       <div class="wrow">
@@ -1515,14 +1520,14 @@ body:has(.mobile-nav.open) .toc-back { opacity: 0; pointer-events: none; }
         <a class="wi" href="#voices" style="--c:#34C759"><span class="ic" aria-hidden="true">💬</span><span class="lb">生徒の声</span></a>
       </div>
       <div class="wrow">
-        <a class="wi" href="#fees" style="--c:#8E8E93"><span class="ic" aria-hidden="true">🏷️</span><span class="lb">料金</span></a>
+        <a class="wi" href="#fees" style="--c:#FFCC00"><span class="ic tx dark" aria-hidden="true">¥</span><span class="lb">料金</span></a>
         <a class="wi" href="#curriculum" style="--c:#0A84FF"><span class="ic" aria-hidden="true">📚</span><span class="lb">指導教科</span></a>
         <a class="wi" href="#classroom" style="--c:#64D2FF"><span class="ic" aria-hidden="true">🏫</span><span class="lb">教室の様子</span></a>
         <a class="wi" href="#calendar" style="--c:#FFFFFF"><span class="ic" aria-hidden="true">📅</span><span class="lb">カレンダー</span></a>
       </div>
       <div class="wrow">
         <a class="wi" href="#access" style="--c:#30B0C7"><span class="ic" aria-hidden="true">🗺️</span><span class="lb">アクセス</span></a>
-        <a class="wi" href="#faq" style="--c:#BF5AF2"><span class="ic" aria-hidden="true">❓</span><span class="lb">よくある質問</span></a>
+        <a class="wi" href="#faq" style="--c:#BF5AF2"><span class="ic tx" aria-hidden="true">?</span><span class="lb">よくある質問</span></a>
         <a class="wi" href="#contact" style="--c:#FF2D55"><span class="ic" aria-hidden="true">✉️</span><span class="lb">お問い合わせ</span></a>
       </div>
     </div>
