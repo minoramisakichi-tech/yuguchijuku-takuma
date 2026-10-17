@@ -399,9 +399,11 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
   .road { padding: 18px 14px 14px; }
   .road .rh span { display: block; margin: 4px 0 0; }
   .rsteps { grid-template-columns: 1fr; gap: 0; }
-  .rs, .rs.s1, .rs.s4 { margin: 0 0 -6px; padding: 12px 14px 20px; border-radius: 0; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), 50% 100%, 0 calc(100% - 12px)); }
-  .rs.s1 { border-radius: 12px 12px 0 0; }
-  .rs.s4 { margin-bottom: 0; padding-bottom: 14px; border-radius: 0 0 12px 12px; clip-path: none; }
+  .rs, .rs.s1, .rs.s4 { position: relative; margin: 0 0 -26px; padding: 40px 14px 34px; border-radius: 0; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 26px), 50% 100%, 0 calc(100% - 26px)); }
+  .rs.s1 { z-index: 4; padding-top: 16px; border-radius: 14px 14px 0 0; }
+  .rs.s2 { z-index: 3; }
+  .rs.s3 { z-index: 2; }
+  .rs.s4 { z-index: 1; margin-bottom: 0; padding-bottom: 16px; border-radius: 0 0 14px 14px; clip-path: none; }
   .rs .t { font-size: 18px; }
 }
 </style>
