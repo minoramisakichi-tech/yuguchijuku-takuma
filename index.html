@@ -1358,8 +1358,8 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
 /* === 新中1特設ページ導線の追加（2026-09） === */
 /* ナビ項目が増えたぶん間隔を微調整 */
 header nav { margin-left: 18px; }
-nav ul { gap: 13px; }
-nav a { font-size: 13px; }
+nav ul { gap: 18px; }
+nav a { font-size: 14px; }
 header.scrolled nav ul { gap: 9px; }
 
 /* 「新中1体験」はピル型で目立たせる */
@@ -1374,7 +1374,7 @@ header.scrolled nav ul { gap: 9px; }
 /* 既存不具合の修正：横スクロールが出ていた 721〜1150px でもハンバーガーに切り替える
    （従来は720px以下でしか切り替わらず、ノートPC・タブレット横向きで
      ナビがはみ出して画面が横にずれていました） */
-@media (max-width: 1150px) {
+@media (max-width: 960px) {
   nav ul { display: none; }
   .hamburger { display: flex; }
 }
@@ -1383,9 +1383,25 @@ header.scrolled nav ul { gap: 9px; }
    ナビ項目が15個になり、1200px前後の画面ではみ出すため、
    ヘッダーの幅を広げ、それでも収まらない幅ではハンバーガーに切り替える */
 .header-inner { max-width: 1340px; }
-@media (max-width: 1300px) {
+@media (max-width: 960px) {
   nav ul { display: none; }
   .hamburger { display: flex; }
+}
+
+/* === ヘッダーを絞り、トップに目次を置く（2026-10） === */
+.page-toc { padding: 8px 0 34px; }
+.page-toc-title { text-align: center; color: var(--navy); font-weight: 800; font-size: 15px; margin-bottom: 14px; }
+.page-toc-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 900px; margin: 0 auto; }
+.page-toc-list a {
+  display: inline-block; padding: 8px 16px; border-radius: 999px;
+  background: white; border: 2px solid #CDEBF5; color: var(--navy);
+  font-size: 14px; font-weight: 700; text-decoration: none;
+  transition: background .15s ease, border-color .15s ease;
+}
+.page-toc-list a:hover { background: #E8F5FA; border-color: var(--blue); }
+@media (max-width: 720px) {
+  .page-toc-list { gap: 8px; }
+  .page-toc-list a { font-size: 13px; padding: 7px 12px; }
 }
 </style>
 </head>
@@ -1400,15 +1416,8 @@ header.scrolled nav ul { gap: 9px; }
       <ul>
         <li><a href="shinchu1.html" class="nav-shinchu1">新中1体験</a></li>
         <li><a href="puzzle.html">パズル道場</a></li>
-        <li><a href="#philosophy">理念</a></li>
         <li><a href="#whatsnew">お知らせ</a></li>
-        <li><a href="#achievements">テスト実績</a></li>
-        <li><a href="#pass-results">合格実績</a></li>
-        <li><a href="#teachers">講師紹介</a></li>
-        <li><a href="#voices">生徒の声</a></li>
         <li><a href="#fees">料金</a></li>
-        <li><a href="#curriculum">指導教科</a></li>
-        <li><a href="#classroom">教室の様子</a></li>
         <li><a href="#calendar">カレンダー</a></li>
         <li><a href="#access">アクセス</a></li>
         <li><a href="#faq">よくある質問</a></li>
@@ -1422,15 +1431,8 @@ header.scrolled nav ul { gap: 9px; }
   <div class="mobile-nav" id="mobileNav">
     <a href="shinchu1.html" class="mnav-shinchu1">新中1 無料体験のご案内</a>
     <a href="puzzle.html">パズル道場DX（小学生）</a>
-    <a href="#philosophy">理念</a>
     <a href="#whatsnew">お知らせ</a>
-    <a href="#achievements">テスト実績</a>
-    <a href="#pass-results">合格実績</a>
-    <a href="#teachers">講師紹介</a>
-    <a href="#voices">生徒の声</a>
     <a href="#fees">料金</a>
-    <a href="#curriculum">指導教科</a>
-    <a href="#classroom">教室の様子</a>
     <a href="#calendar">カレンダー</a>
     <a href="#access">アクセス</a>
     <a href="#faq">よくある質問</a>
@@ -1459,6 +1461,28 @@ header.scrolled nav ul { gap: 9px; }
     </div>
   </div>
 </section>
+
+<div class="page-toc" role="navigation" aria-label="このページの目次">
+  <div class="container">
+    <div class="page-toc-title">このページの内容</div>
+    <div class="page-toc-list">
+      <a href="#twoway">2つの通い方</a>
+      <a href="#whatsnew">お知らせ</a>
+      <a href="#philosophy">理念</a>
+      <a href="#achievements">テスト実績</a>
+      <a href="#pass-results">合格実績</a>
+      <a href="#teachers">講師紹介</a>
+      <a href="#voices">生徒の声</a>
+      <a href="#fees">料金</a>
+      <a href="#curriculum">指導教科</a>
+      <a href="#classroom">教室の様子</a>
+      <a href="#calendar">カレンダー</a>
+      <a href="#access">アクセス</a>
+      <a href="#faq">よくある質問</a>
+      <a href="#contact">お問い合わせ</a>
+    </div>
+  </div>
+</div>
 
 <section class="twoway" id="twoway">
   <div class="container">
