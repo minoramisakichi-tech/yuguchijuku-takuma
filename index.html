@@ -1399,6 +1399,25 @@ header.scrolled nav ul { gap: 9px; }
   transition: background .15s ease, border-color .15s ease;
 }
 .page-toc-list a:hover { background: #E8F5FA; border-color: var(--blue); }
+.page-toc { scroll-margin-top: 90px; }
+/* 目次へ戻るボタン（右下） */
+.toc-back {
+  position: fixed; right: 20px; bottom: 24px; z-index: 190;
+  display: flex; align-items: center; gap: 4px;
+  padding: 11px 16px; border-radius: 999px;
+  background: var(--blue-deep); color: white;
+  font-size: 14px; font-weight: 800; text-decoration: none;
+  box-shadow: 0 6px 18px rgba(30,58,110,0.25);
+  opacity: 0; pointer-events: none; transform: translateY(10px);
+  transition: opacity .25s ease, transform .25s ease, background .15s ease;
+}
+.toc-back.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.toc-back:hover { background: var(--navy); }
+.toc-back:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
+@media (max-width: 899px) {
+  .toc-back { right: 14px; bottom: calc(92px + env(safe-area-inset-bottom)); padding: 10px 14px; font-size: 13px; }
+}
+body:has(.mobile-nav.open) .toc-back { opacity: 0; pointer-events: none; }
 @media (max-width: 720px) {
   .page-toc-list { gap: 8px; }
   .page-toc-list a { font-size: 13px; padding: 7px 12px; }
@@ -1462,7 +1481,7 @@ header.scrolled nav ul { gap: 9px; }
   </div>
 </section>
 
-<div class="page-toc" role="navigation" aria-label="このページの目次">
+<div class="page-toc" id="toc" role="navigation" aria-label="このページの目次">
   <div class="container">
     <div class="page-toc-title">このページの内容</div>
     <div class="page-toc-list">
@@ -2262,6 +2281,8 @@ document.querySelectorAll('.mobile-nav a').forEach(link => {
 </script>
 
 
+<a class="toc-back" id="tocBack" href="#toc" aria-label="このページの目次へ戻る">↑ 目次へ</a>
+
 <div class="sticky-cta" id="stickyCta">
   <a class="cta-form" href="#contact">✏️ 体験のお申し込み</a>
   <a class="cta-line" href="#contact">💬 LINEで相談</a>
@@ -2295,6 +2316,24 @@ document.querySelectorAll('.mobile-nav a').forEach(link => {
   window.addEventListener('scroll', toggleCta, { passive: true });
   window.addEventListener('resize', toggleCta);
   toggleCta();
+})();
+
+// 目次へ戻るボタン：目次より下にスクロールしたら表示
+(function() {
+  var btn = document.getElementById('tocBack');
+  var toc = document.getElementById('toc');
+  if (!btn || !toc) return;
+  function update() {
+    if (toc.getBoundingClientRect().bottom < 0) btn.classList.add('show');
+    else btn.classList.remove('show');
+  }
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    toc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
 })();
 
 // Sticky header shrink on scroll
