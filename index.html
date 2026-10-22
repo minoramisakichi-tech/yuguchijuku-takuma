@@ -464,6 +464,10 @@ section { padding: 88px 24px; position: relative; }
   border: 2px solid rgba(94,200,232,0.15);
 }
 
+.news-item.news-alert { background: #FFF1F1; border: 2px solid #E5484D; }
+.news-item.news-alert .news-date { color: #C62828; }
+.news-item.news-alert .news-title { color: #B71C1C; }
+.news-item.news-alert .news-desc b { color: #B71C1C; }
 .news-item.news-highlight {
   background: #fff8ee;
   border: 2px solid var(--accent-yellow);
@@ -1624,6 +1628,13 @@ body:has(.mobile-nav.open) .toc-back { opacity: 0; pointer-events: none; }
       <h2 class="section-title">詫間教室からのお知らせ</h2>
     </div>
     <div class="news-list">
+      <div class="news-item news-alert">
+        <div class="news-date">お休みの変更<br>2026.10.22</div>
+        <div class="news-content">
+          <div class="news-title">⚠️ 塾のお休み変更のお知らせ</div>
+          <div class="news-desc">先日お知らせしたお休みの日程を、次のとおり変更します。<br><b>10/29（木）〜10/31（土）</b>は塾はお休みです。<br><b>11/2（月）は通常どおり授業があります。</b><br>そのかわり、<b>11/23（月・祝）</b>をお休みにします。<br>11/3（火・祝）は小学生の授業はお休みです。中2英語・社会、中3数学・理科の授業はあります。</div>
+        </div>
+      </div>
       <a href="shinchu1.html" class="news-item news-highlight news-link">
         <div class="news-date">予告</div>
         <div class="news-content">
@@ -1640,12 +1651,6 @@ body:has(.mobile-nav.open) .toc-back { opacity: 0; pointer-events: none; }
           <div class="news-more">結果を見る →</div>
         </div>
       </a>
-      <div class="news-item">
-        <div class="news-date">2026.10.29〜11.03</div>
-        <div class="news-content">
-          <div class="news-title">休塾期間のお知らせ</div>
-          <div class="news-desc">10/29（木）〜11/2（月）は塾はお休みです。<br>11/3（火・祝）は小学生の授業はお休みです。中2英語・社会、中3数学・理科の授業はあります</div>
-        </div>
       </div>
       <a href="puzzle.html" class="news-item news-highlight news-link">
         <div class="news-date">毎週開催中</div>
