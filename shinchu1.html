@@ -231,6 +231,9 @@ table.rate td:first-child { color: var(--muted); }
 }
 
 /* faq */
+.empathy { background: #fff; border-left: 5px solid var(--blue-deep); border-radius: var(--radius-md); padding: 24px 26px; margin-bottom: 44px; box-shadow: 0 4px 16px rgba(30,58,110,.06); }
+.empathy .em-q { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: clamp(19px, 2.4vw, 23px); color: var(--navy); line-height: 1.5; }
+.empathy p { margin-top: 12px; font-size: 15.5px; line-height: 1.9; color: var(--navy); }
 details.faq { background: #E4F4FC; border-radius: var(--radius-md); padding: 19px 24px; margin-top: 13px; }
 details.faq > summary { cursor: pointer; list-style: none; font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: 15.5px; display: flex; justify-content: space-between; gap: 12px; align-items: center; }
 details.faq > summary::-webkit-details-marker { display: none; }
@@ -513,12 +516,16 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
 <!-- BACKGROUND -->
 <section class="block">
   <div class="container">
+    <div class="empathy">
+      <div class="em-q">「夜は練習があるから、塾はむずかしいかな」</div>
+      <p>そう思って、どちらかをあきらめかけていませんか。<br>中学校の3年間は、好きなことに打ち込める大切な時間であり、高校受験に向けて力をつける時間でもあります。湯口塾は、そのどちらも大切にしたいと考えています。<br>夕方に学ぶか、夜に学ぶか。お子さまの毎日に合わせた通い方を、いっしょに考えませんか。</p>
+    </div>
     <div class="section-eyebrow">background</div>
     <h2 class="section-title">部活動が変わる今、選べる通い方を。</h2>
     <p class="section-lead">三豊市では部活動の地域移行が段階的に進んでいます。平日夜だけの集団授業では両立が難しいご家庭が、これから増えていくと考えられます。</p>
     <div class="info-strip">
       <div class="ico">🕒</div>
-      <p>地域クラブ「MARGARET mitoyoSC」の活動日と、来年度の集団授業の曜日が重なることが分かりました。夕方に通えるACTなら、そうした重なりも心配いりません。</p>
+      <p>地域クラブ「MARGARET mitoyoSC」の活動日と、来年度の集団授業の曜日が重なることが分かりました。夕方のACTなら、練習の前に塾で学ぶという通い方もできます。練習の時間はクラブによって異なりますので、お気軽にご相談ください。</p>
     </div>
 
     <div class="cocreate">
@@ -779,6 +786,7 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
     <details class="faq"><summary>体験に入塾試験はありますか？</summary><p>ありません。体験後、そのままご相談・お手続きに進んでいただけます。試験や面接が必要なのは、年度の途中から入塾される場合のみです。</p></details>
     <details class="faq"><summary>ACTと集団授業は、途中で変更できますか？</summary><p>授業料の体系が異なるため、頻繁な変更は難しくなります。部活動やクラブの予定が変わったなど、ご事情があるときはご相談ください。</p></details>
     <details class="faq"><summary>料金についてもっと詳しく知りたいです</summary><p>1月から3月第3週までは集団指導（英数セット）の月額19,630円です。3月最終週からは、夜の集団指導を続ける場合は同じ19,630円、夕方のACTを選ばれた場合は週1コース14,910円〜となります。このほかに入会金11,000円（兄弟割引5,500円）と教材費（集団指導 月820円／ACT 月1,850円）が必要です。すべて消費税込みの金額です。</p></details>
+    <details class="faq"><summary>仕事の都合で、17:30に間に合わないのですが。</summary><p>遅れてのご参加でも大丈夫です。お子さまの体験・保護者説明会とも、途中からご参加いただけます。</p></details>
     <details class="faq"><summary>保護者も一緒に参加できますか？</summary><p>はい。体験と同じ2027年1月19日（火）17:30〜18:40に、別の教室で保護者説明会を行います。お子さまが体験を受けているあいだ、来年度の通い方・時間割・料金についてご説明します。体験のあとは、そのまま個別のご相談にも進んでいただけます。</p></details>
     <details class="faq"><summary>定員はありますか？</summary><p>定員は26名です。教室の広さの都合で、定員に達し次第、受付を終了します。締め切った場合はホームページとInstagramでお知らせします。</p></details>
     <details class="faq"><summary>ACTは、スポーツをしている子だけが対象ですか？</summary><p>いいえ。夜に練習がある子はもちろん、自分のペースでじっくり学びたい子にも合う通い方です。どちらが合うか迷われる場合は、体験の日にお気軽にご相談ください。</p></details>
@@ -813,13 +821,13 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
         <div class="cta-id">LINE ID検索：<b>@336joxeu</b></div>
       </div>
     </div>
-    <div class="cta-tel">お電話でも承ります　<a href="tel:08029957135">080-2995-7135</a></div>
+    <div class="cta-tel">お電話でも承ります　<a href="tel:0875833555">0875-83-3555</a></div>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <div>湯口塾詫間教室　香川県三豊市詫間町詫間680-57　TEL 080-2995-7135</div>
+    <div>湯口塾詫間教室　香川県三豊市詫間町詫間680-57　TEL 0875-83-3555</div>
     <div><a href="index.html#top">ホームへ戻る</a></div>
   </div>
 </footer>
