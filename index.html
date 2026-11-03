@@ -1361,6 +1361,13 @@ footer .footer-logo { height: 30px; margin-bottom: 14px; opacity: 0.9; }
 .pass-banner-row .pass-banner { flex: 1 1 280px; max-width: 480px; }
 .pass-gutz-img { width: 128px; flex-shrink: 0; }
 @media (max-width: 720px) { .pass-gutz-img { width: 96px; order: -1; } }
+
+/* 2026-11 国公立高校 合格率 */
+.pass-rate { display: flex; align-items: center; justify-content: center; gap: 14px 20px; flex-wrap: wrap; margin: 14px auto 16px; padding: 14px 22px; max-width: 560px; background: #fff; border: 3px solid #FF4F8B; border-radius: 18px; text-align: center; }
+.pass-rate .pr-label { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: 16px; color: #D81B60; line-height: 1.35; }
+.pass-rate .pr-num { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; font-size: clamp(44px, 7vw, 60px); color: #E91E63; line-height: 1; }
+.pass-rate .pr-num small { font-size: .5em; margin-left: 2px; }
+.pass-rate .pr-note { font-size: 12.5px; font-weight: 700; color: #6b7a8a; }
 </style>
 
 <style>
@@ -1795,6 +1802,7 @@ body:has(.mobile-nav.open) .toc-back { opacity: 0; pointer-events: none; }
           <div class="pass-results-title">湯口塾 塾生 合格実績</div>
         </div>
       </div>
+      <div class="pass-rate"><div class="pr-label">国公立高校<br>塾生合格率</div><div class="pr-num">98.9<small>%</small></div><div class="pr-note">令和8年度・湯口塾全体</div></div>
       <div class="pass-results-note">2026年3/19発表・一部抜粋</div>
       <div class="pass-grid">
       <div class="pass-item"><span class="school">観音寺第一</span><span class="num">49<span>名</span></span></div>
