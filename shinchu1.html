@@ -416,6 +416,7 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
 /* 2026-11 チラシのイラスト・実績帯 */
 .ill-strip { display: flex; justify-content: center; align-items: flex-end; gap: clamp(8px, 3vw, 28px); margin: 0 auto 14px; }
 .ill-strip img { height: clamp(96px, 16vw, 150px); width: auto; filter: drop-shadow(0 6px 8px rgba(30,58,110,.15)); }
+@media (max-width: 600px) { .ill-strip { gap: 4px; } .ill-strip img { height: calc((100vw - 120px) / 3.8); } }
 .cell.has-ill { padding-right: 78px; min-height: 76px; overflow: visible; }
 .cell .ci { position: absolute; right: 6px; bottom: 2px; height: 72px; width: auto; pointer-events: none; }
 .ach-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 26px; border-radius: 18px; background: linear-gradient(135deg, #12A47A 0%, #0B7F5E 100%); color: #fff; padding: 18px 10px; box-shadow: 0 10px 22px -16px rgba(7,90,66,.6); }
@@ -542,7 +543,7 @@ a.voice-link:focus-visible { outline: 3px solid var(--blue-deep); outline-offset
 <section class="block">
   <div class="container">
     <div class="empathy">
-      <div class="ill-strip" aria-hidden="true"><img src="img/ill-soccer.webp" alt="" loading="lazy"><img src="img/ill-baseball.webp" alt="" loading="lazy"><img src="img/ill-student.webp" alt="" loading="lazy"></div>
+      <div class="ill-strip" aria-hidden="true"><img src="img/ill-soccer.webp" alt="" loading="lazy"><img src="img/ill-baseball.webp" alt="" loading="lazy"><img src="img/ill-student.webp" alt="" loading="lazy"><img src="img/ill-girl.webp" alt="" loading="lazy"></div>
       <div class="em-q">「夜は練習があるから、塾はむずかしいかな」</div>
       <p>そう思って、どちらかをあきらめかけていませんか。<br>中学校の3年間は、好きなことに打ち込める大切な時間であり、高校受験に向けて力をつける時間でもあります。湯口塾は、そのどちらも大切にしたいと考えています。<br>夕方に学ぶか、夜に学ぶか。お子さまの毎日に合わせた通い方を、いっしょに考えませんか。</p>
     </div>
