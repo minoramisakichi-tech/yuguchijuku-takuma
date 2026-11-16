@@ -271,12 +271,15 @@ nav a:hover::after { width: 100%; }
 
 .hero-title .accent { color: var(--blue-deep); }
 .hero-title-sub { display: block; font-size: 0.62em; margin-top: 10px; line-height: 1.6; }
-.hero-sub2 { font-size: 16px; color: var(--muted, #4E5E6E); margin-top: -18px; }
+.hero-sub p { margin: 0 0 12px; }
+.hero-sub p:first-child { font-weight: 700; color: var(--navy); }
 .hero-photo { margin: 0; width: 100%; max-width: 520px; border-radius: 28px; overflow: hidden;
   border: 6px solid #fff; box-shadow: 0 20px 40px rgba(30,58,110,0.18); transform: rotate(1.5deg); }
 .hero-photo img { display: block; width: 100%; height: auto; max-width: none !important; filter: none !important; animation: none !important; }
 .hero-visual img.hero-mascot { position: absolute; left: -10px; bottom: -40px; width: 150px; max-width: 150px; }
 @media (max-width: 720px) {
+  .hero-title { font-size: min(27px, 7vw); }
+  .hero-sub p:first-child { font-size: min(16px, 4.2vw); }
   .hero-visual { order: -1; margin-bottom: 12px; }
   .hero-photo { max-width: 340px; }
   .hero-visual img.hero-mascot { width: 96px; max-width: 96px; left: 0; bottom: -28px; }
@@ -1591,13 +1594,13 @@ body:has(.mobile-nav.open) .toc-back { opacity: 0; pointer-events: none; }
   <div class="hero-inner">
     <div class="hero-text">
       <span class="eyebrow">詫間町の学習塾 · 香川県三豊市 · Since 1978</span>
-      <h1 class="hero-title">ちょっと疲れた日も、<br>塾に行こう。<span class="hero-title-sub">そこには、<span class="accent">いつもの友達</span>がいるから。</span></h1>
-      <p class="hero-sub">
-        学校や部活で疲れた日でも、友達の顔を見ると、なんだか元気が出る。おしゃべりして、笑って、勉強の時間になれば、それぞれが自分の目標に向かう。となりで頑張る友達を見て、「自分ももうちょっと頑張ろう」と思える。わからないところは、気軽に聞ける。
-      </p>
-      <p class="hero-sub hero-sub2">
-        湯口塾詫間教室は、上位の子だけのための塾ではありません。苦手な教科があっても、結果がすぐに出なくても大丈夫。先生も、いっしょに考えて、いっしょに頑張ります。
-      </p>
+      <h1 class="hero-title"><span class="accent">いつもの友達</span>がいるから、<br>ちょっと疲れた日も<br>塾に行こう。</h1>
+      <div class="hero-sub">
+        <p>塾は、勉強だけをする場所ではありません。</p>
+        <p>いつもの友達と顔を合わせて、話をしたり、笑い合ったり、一緒に勉強したり。そんな何気ない時間が、明日も頑張ろうという気持ちにつながっていきます。</p>
+        <p>ちょっと疲れた日も、何となく元気が出ない日も、ここに来ればいつもの仲間がいる。湯口塾が、生徒たちにとって安心して過ごせる場所でありたいと考えています。</p>
+        <p>そして、友達と一緒に過ごす中で、自然と勉強にも前向きになり、それぞれの目標に向かって歩んでいける。そんな教室を目指しています。</p>
+      </div>
       <div class="cta-group">
         <a href="#contact" class="btn btn-primary">✏️ まずは体験から</a>
         <a href="#curriculum" class="btn btn-secondary">指導教科を見る</a>
