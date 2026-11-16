@@ -270,6 +270,10 @@ nav a:hover::after { width: 100%; }
 }
 
 .hero-title .accent { color: var(--blue-deep); }
+.hero-text { container-type: inline-size; }
+.hero-title { font-size: clamp(24px, 3.2vw, 44px); }
+@supports (font-size: 1cqi) { .hero-title { font-size: min(44px, 7.3cqi); } }
+.hero-title .ln { white-space: nowrap; }
 .hero-title-sub { display: block; font-size: 0.62em; margin-top: 10px; line-height: 1.6; }
 .hero-sub p { margin: 0 0 12px; }
 .philo-lead { margin-top: 12px; max-width: 640px; font-size: 16px; line-height: 1.9; color: var(--text); font-weight: 500; }
@@ -279,7 +283,6 @@ nav a:hover::after { width: 100%; }
 .hero-photo img { display: block; width: 100%; height: auto; max-width: none !important; filter: none !important; animation: none !important; }
 .hero-visual img.hero-mascot { position: absolute; left: -10px; bottom: -40px; width: 150px; max-width: 150px; }
 @media (max-width: 720px) {
-  .hero-title { font-size: min(26px, 6.6vw); }
   .hero-sub p:first-child { font-size: min(16px, 4.2vw); }
   .hero-visual { order: -1; margin-bottom: 12px; }
   .hero-photo { max-width: 340px; }
@@ -1595,7 +1598,7 @@ body:has(.mobile-nav.open) .toc-back { opacity: 0; pointer-events: none; }
   <div class="hero-inner">
     <div class="hero-text">
       <span class="eyebrow">詫間町の学習塾 · 香川県三豊市 · Since 1978</span>
-      <h1 class="hero-title"><span class="accent">いつもの友だち</span>がいるから、<br>ちょっと疲れた日も<br>塾に行こう。</h1>
+      <h1 class="hero-title"><span class="ln"><span class="accent">いつもの友だち</span>がいるから、</span><br><span class="ln">ちょっと疲れた日も</span><br><span class="ln">塾に行こう。</span></h1>
       <div class="hero-sub">
         <p>塾は、勉強だけをする場所ではありません。</p>
         <p>いつもの友だちと顔を合わせて、話をしたり、笑い合ったり、一緒に勉強したり。そんな何気ない時間が、明日も頑張ろうという気持ちにつながっていきます。</p>
