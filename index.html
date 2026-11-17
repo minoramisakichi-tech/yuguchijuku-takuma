@@ -272,8 +272,17 @@ nav a:hover::after { width: 100%; }
 .hero-title .accent { color: var(--blue-deep); }
 .hero-text { container-type: inline-size; }
 .hero-title { font-size: clamp(24px, 3.2vw, 44px); }
-@supports (font-size: 1cqi) { .hero-title { font-size: min(44px, 7.3cqi); } }
+@supports (font-size: 1cqi) { .hero-title { font-size: min(52px, 9.4cqi); } }
 .hero-title .ln { white-space: nowrap; }
+.hero-title .hero-title-sub { display: block; font-size: 0.56em; margin-top: 14px; line-height: 1.5; color: var(--navy); }
+.hero-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 4px 0 28px; max-width: 560px; }
+.pillar { display: flex; gap: 10px; align-items: flex-start; background: #fff; border-radius: 16px; padding: 14px 14px; box-shadow: 0 6px 16px rgba(30,58,110,0.08); }
+.pillar-friends { border: 2px solid var(--blue-deep); }
+.pillar-teacher { border: 2px solid #e3eef5; }
+.pillar-ic { font-size: 26px; line-height: 1; }
+.pillar-t { font-weight: 800; color: var(--navy); font-size: 15px; margin-bottom: 4px; }
+.pillar-d { font-size: 13px; line-height: 1.7; color: var(--text); }
+@media (max-width: 720px) { .hero-pillars { grid-template-columns: 1fr; } }
 .hero-title-sub { display: block; font-size: 0.62em; margin-top: 10px; line-height: 1.6; }
 .hero-sub p { margin: 0 0 12px; }
 .philo-lead { margin-top: 12px; max-width: 640px; font-size: 16px; line-height: 1.9; color: var(--text); font-weight: 500; }
@@ -1600,12 +1609,21 @@ body:has(.mobile-nav.open) .toc-back { opacity: 0; pointer-events: none; }
   <div class="hero-inner">
     <div class="hero-text">
       <span class="eyebrow">詫間町の学習塾 · 香川県三豊市 · Since 1978</span>
-      <h1 class="hero-title"><span class="ln"><span class="accent">いつもの友だち</span>がいるから、</span><br><span class="ln">ちょっと疲れた日も</span><br><span class="ln">塾に行こう。</span></h1>
+      <h1 class="hero-title"><span class="ln">ちょっと疲れた日も、</span><br><span class="ln">塾に行こう。</span><span class="hero-title-sub"><span class="ln">そこにはいつもの<span class="accent">友だち</span>がいるから。</span></span></h1>
       <div class="hero-sub">
         <p>塾は、勉強だけをする場所ではありません。</p>
-        <p>いつもの友だちと顔を合わせて、話をしたり、笑い合ったり、一緒に勉強したり。そんな何気ない時間が、明日も頑張ろうという気持ちにつながっていきます。</p>
-        <p>ちょっと疲れた日も、何となく元気が出ない日も、ここに来ればいつもの仲間がいる。湯口塾が、生徒たちにとって安心して過ごせる場所でありたいと考えています。</p>
-        <p>そして、友だちと一緒に過ごす中で、自然と勉強にも前向きになり、それぞれの目標に向かって歩んでいける。そんな教室を目指しています。</p>
+        <p>いつもの友だちと顔を合わせ、話をしたり、笑い合ったり、一緒に勉強したり。そんな何気ない時間が、明日も頑張ろうという気持ちにつながっていきます。</p>
+        <p>学校とはまた違う、友だちと過ごせるもう一つの居場所。湯口塾が、生徒たちにとってそんな安心できる場所でありたいと考えています。</p>
+      </div>
+      <div class="hero-pillars">
+        <div class="pillar pillar-friends">
+          <div class="pillar-ic" aria-hidden="true">👫</div>
+          <div><div class="pillar-t">いつもの友だちがいる</div><div class="pillar-d">顔を合わせて、話して、笑って。いっしょだから、勉強にも向き合える。</div></div>
+        </div>
+        <div class="pillar pillar-teacher">
+          <div class="pillar-ic" aria-hidden="true">💬</div>
+          <div><div class="pillar-t">相談できる先生がいる</div><div class="pillar-d">勉強の質問はもちろん、学校のことや、ちょっとした悩みも。気軽に話せる先生がいます。</div></div>
+        </div>
       </div>
       <div class="cta-group">
         <a href="#contact" class="btn btn-primary">✏️ まずは体験から</a>
